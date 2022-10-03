@@ -1,0 +1,99 @@
+body {
+    background-color: black;
+    color: #FFFFFF;
+}
+/*Cabeçalho*/
+header {
+    text-align: center;
+    border-bottom: 1px solid #FFFFFF;
+    height: 155px;
+    width: 100%;
+}
+.cabecalho--titulo {
+    font-size: 40px;
+}
+.cabecalho--link {
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 700;
+}
+.cabecalho--informacao {
+    font-size: 20px;
+}
+
+/*Visual Painel Exibição*/
+.principal {
+    margin-top: 10px;
+    width: 80%;
+    background-color: #FFFFFF;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-bottom: 35px;
+}
+.painel--usuario {
+    width: 48%;
+    height: 90%;
+    display: inline-block;
+    margin: 1%;
+    background-color: rgb(180, 180, 180);
+}
+.painel--computador {
+    width: 48%;
+    height: 90%;
+    display: inline-block;
+    margin: 1% 1% 1% 1%;
+    background-color: rgb(180, 180, 180);
+}
+.escolha{
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+.desenhos {
+    width: 150px;
+    height: 130px;
+    background-color: #FFFFFF;
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.escolha--usuario {
+    text-align: center;
+}
+.escolha--mensagem {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+.container--escolha {
+    text-align: center;
+}
+.escolha--usuario {
+    width: 55%;
+    height: 250px;
+    background-color: gray;
+    margin: auto;
+}
+.escolha--principal {
+    display: inline-block;
+    padding-left: 30px;
+    text-align: center;
+    margin-left: auto;
+}
+.pedra {
+    padding-left: 0;
+}
+button {
+    cursor: pointer;
+}
+
+
+/*
+.escolhas1 {
+    padding-left: 40px;
+    font-weight: 600;
+}

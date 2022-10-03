@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JokenPooooo</title>
+</head>
+<body>
+    <header class="cabecalho container__cabecalho">
+        <h1 class="cabecalho--titulo">Jo ken po</h1>
+        <p class="cabecalho--informacao">Seja bem vindo ao Jo Ken Po</p>
+        <p class="cabecalho--informacao">Para maiores informações sobre como o jogo funciona <a href="regras.html" class="cabecalho--link">clique aqui</a></p>
+    </header>
+    <main class="container__geral container--geral">
+        <div class="principal">
+            <div class="painel--usuario">
+                <h2 class="escolha">Jogador</h2>
+                <div class="desenhos">
+                    <p id="desenho--jogador"></p>
+                </div>
+            </div>
+            <div class="painel--computador">
+                <h2 class="escolha">Computador</h2>
+                <div class="desenhos">
+                    <p id="desenho--computador"></p>
+                </div>
+            </div>
+        </div>
+
+        <section class="escolha--usuario">
+            <p class="escolha--mensagem">Qual a sua Escolha?</p>
+
+            <div class="container--escolha">
+                <div class="escolha--principal pedra">
+                    <button id="pedra" aria-label="Pedra"><img src="imagens/pedra.png" alt="pedra"></button>
+                    <p class="escolha escolhas1">Pedra</p>
+                </div>
+                <div class="escolha--principal papel">
+                    <button id="papel" aria-label="Papel"><img src="imagens/papel.png" alt="papel"></button>
+                    <p class="escolha escolhas1">Papel</p>
+                </div>
+                <div class="escolha--principal tesoura">
+                    <button id="tesoura" aria-label="Tesoura"><img src="imagens/tesoura.png" alt="tesoura"></button>
+                    <p class="escolha escolha1">Tesoura</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <script src="js/jokenpo.js"></script>
+</body>
+</html>
