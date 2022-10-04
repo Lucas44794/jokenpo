@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+    color: #FFFFFF;
+}
+main {
+    width: 50%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    background-color: #FFFFFF;
+    color: black
+    
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+h2 {
+    font-size: 35px;
+    text-align: center;
+}
+h3 {
+    font-size: 29px;
+    text-align: center;
+}
+p {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.jogar {
+    text-align: center;
+}
+.desenho {
+    text-align: center;
+    font-weight: 600;
+}
+.link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+.link--principal {
+    font-size: 20px;
+    color: #ff0000;
+}
+.container--desenho {
+    width: 30px;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 90%;
+    }
+}
