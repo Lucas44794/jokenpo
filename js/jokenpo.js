@@ -1,6 +1,8 @@
 let pedra = document.getElementById('pedra');
 let papel = document.getElementById('papel');
 let tesoura = document.getElementById('tesoura');
+let exibicaoJogador = document.querySelector('desenho--jogador');
+let exibicaoComputador = document.querySelector('desenho--computador');
 
 // Variável da condição
 let jogador = 0;
@@ -11,6 +13,8 @@ let jogador2 = 2;
 pedra.addEventListener('click', jogoPedra);
 papel.addEventListener('click', jogoPapel);
 tesoura.addEventListener('click', jogoTesoura);
+resultado.getElementById('resultado');
+
 
 
 // Jogo da Pedra
@@ -26,23 +30,21 @@ function jogoPedra(){
     const computador = Math.floor(Math.random() * 3);
 
     if(jogador == 0) { // Pedra
+        document.getElementById('desenho--jogador').src='imagens/pedra.png';
         if (computador == 0){ // Pedra
-            
-            document.querySelector('.span_jogador').textContent = 'Deu Empate';
-            document.querySelector('#desenho--computador').textContent = 'Deu Empate';
-            alert('Deu empate!');
+            document.getElementById('resultado').textContent = 'Empate';
+            document.getElementById('desenho--computador').src='imagens/pedra.png';
+            mostraGanhouBranco();
         }
-        else if(computador == 1){ // Papel
-            
-            document.querySelector('.span_jogador').textContent = 'Ganhador!!';
-            document.querySelector('#desenho--computador').textContent = 'Perdedor!!';
-            alert('Ganhou');
+        else if(computador == 1){ // Papel 
+            document.getElementById('resultado').textContent = 'Computador';
+            document.getElementById('desenho--computador').src='imagens/papel.png';
+            mostraGanhou();
         }
         else { // Tesoura
-            
-            document.querySelector('.span_jogador').textContent = 'Perdedor!!';;
-            document.querySelector('#desenho--computador').textContent = 'Ganhador!!';
-            alert('Perdeu');
+            document.getElementById('resultado').textContent = 'Jogador';
+            document.getElementById('desenho--computador').src='imagens/tesoura.png';
+            mostraGanhou();
         }
     }
 }
@@ -50,6 +52,7 @@ function jogoPedra(){
 
 // Jogo do Papel
 function jogoPapel(){
+    document.getElementById('desenho--jogador').src='imagens/papel.png';
     // Lista dos itens
     const opcoes = new Array(
         'Pedra',
@@ -61,24 +64,20 @@ function jogoPapel(){
     const computador = Math.floor(Math.random() * 3);
 
     if(jogador1 == 1) { // Papel
-
         if (computador == 0){ // Pedra
-
-            document.querySelector('.span_jogador').textContent = 'Vendeu!!';
-            document.querySelector('#desenho--computador').textContent = 'Perdeu!!';
-            alert('Venceu!');
+            document.getElementById('resultado').textContent = 'Jogador';
+            document.getElementById('desenho--computador').src='imagens/pedra.png';
+            mostraGanhou();
         }
         else if(computador == 1){ // Papel
-            
-            document.querySelector('.span_jogador').textContent = 'Deu Empate';
-            document.querySelector('#desenho--computador').textContent = 'Deu Empate';
-            alert('Deu empate');
+            document.getElementById('resultado').textContent = 'Empate';
+            document.getElementById('desenho--computador').src='imagens/papel.png'
+            mostraGanhouBranco();            
         }
         else { // Tesoura
-            
-            document.querySelector('.span_jogador').textContent = 'Perdeu!!';
-            document.querySelector('#desenho--computador').textContent = 'Venceu!!';
-            alert('Perdeu');
+            document.getElementById('resultado').textContent = 'Computador';
+            document.getElementById('desenho--computador').src='imagens/tesoura.png';
+            mostraGanhou();
         }
     }
 };
@@ -86,6 +85,7 @@ function jogoPapel(){
 
 // Jogo da Tesoura
 function jogoTesoura(){
+    document.getElementById('desenho--jogador').src='imagens/tesoura.png';
     // Lista dos itens
     const opcoes = new Array(
         'Pedra',
@@ -99,21 +99,29 @@ function jogoTesoura(){
     if(jogador2 == 2) { // Tesoura
         if (computador == 0){ // Pedra
             
-            document.querySelector('.span_jogador').textContent = 'Perdeu!!';
-            document.querySelector('#desenho--computador').textContent = 'Venceu!!';
-            alert('perdeu');
+            document.getElementById('resultado').textContent = 'Computador';
+            document.getElementById('desenho--computador').src='imagens/pedra.png';
+            mostraGanhou();
         }
         else if(computador == 1){ // Papel
             
-            document.querySelector('.span_jogador').textContent = 'Ganhou!!';
-            document.querySelector('#desenho--computador').textContent = 'Perdeu!!';
-            alert('ganhou');
+            document.getElementById('resultado').textContent = 'Jogador';
+            document.getElementById('desenho--computador').src='imagens/papel.png';
+            mostraGanhou();
         }
         else { // Tesoura
             
-            document.querySelector('.span_jogador').textContent = "Deu Empate";
-            document.querySelector('#desenho--computador').textContent = 'Deu Empate';
-            alert('deu empate');
+            document.getElementById('resultado').textContent = "Empate";
+            document.getElementById('desenho--computador').src='imagens/tesoura.png';
+            mostraGanhouBranco();
         }
     }
+};
+
+//Funcoes para mostrar ou não a palavra ganhou
+function mostraGanhou (){
+    document.getElementById('ganhou').textContent = "Ganhou!!!";
+};
+function mostraGanhouBranco (){
+    document.getElementById('ganhou').textContent = "";
 };
